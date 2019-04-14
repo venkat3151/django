@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Medium Editor</title>
+	 <link rel="stylesheet" type="text/css" href="{% static 'bower_components/medium-editor/dist/css/medium-editor.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mediumeditor/django-mediumeditor.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'bower_components/medium-editor/dist/css/themes/beagle.css' %}">
+    {{ form.media }}
+</head>
+<body>
+	<h1>Medium Editor Using Django by Venkatesh</h1>
+<form method="post">
+	<div style="margin-top: 200px;">
+  {% csrf_token %}
+  {{ form }}
+</div>
+</form>
+</body>
+</html>
